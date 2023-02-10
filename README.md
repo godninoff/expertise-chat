@@ -1,38 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Тестовое задание
 
-## Getting Started
+## Задачи:
 
-First, run the development server:
+1. Разработайте на React небольшое приложение-чат.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Установка и запуск
+
+- склонировать репозиторий - git clone https://github.com/godninoff/expertise-chat.git
+- перейти в папку с проектом - cd expertise-chat
+- npm i - установить зависимости
+- npm run dev - для совместного запуска приложения вместе с сервером
+- перейти по url в терминале
+
+2. Изучая причину неправильно работающего приложения, стажёр Маша
+   нашла код, который возвращает не совсем ожидаемый результат.
+
+```
+var arr = [];
+var k = 5;
+for (var index = 0; index < 5; index++) {
+arr.push(() => console.log(k + index));
+k++;
+}
+arr.forEach(element => {
+element.call();
+});
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+После исполнения в консоль будут выведены 5 строчек с числом «15».
+Маша ожидает, что для правильной работы программы, в консоли должны
+быть выведены числа 5, 7, 9, 11, 13 Помогите Маше исправить код.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Решение:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+let arr = [];
+let k = 5;
+for (let index = 0; index < 5; index++) {
+  arr.push(() => console.log(k + index - 1));
+}
+arr.forEach((element) => {
+  element.call(k++);
+});
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Дана БД, имеющая две таблицы: сотрудники и подразделение.  
+   Необходимо написать 5 запросов.  
+   Напишите запросы, которые выведут:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 1. Сотрудника с максимальной заработной платой.
 
-## Learn More
+```
+select * from employee
+where salary > 0
+order by salary desc limit 1
+```
 
-To learn more about Next.js, take a look at the following resources:
+- 2.  Отдел с самой высокой заработной платой между сотрудниками.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+select d.name, avg(salary) as salary_avg from employee e
+join department d on d.id = e.department_id
+where salary > 0
+group by e.department_id, d.name
+order by salary_avg desc
+limit 1
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 3. Отдел с максимальной суммарной зарплатой сотрудников.
 
-## Deploy on Vercel
+```
+select d.name, max(salary) as salary_max from employee e
+join department d on d.id = e.department_id
+where salary > 0
+group by e.department_id, d.name
+order by salary_max desc
+limit 1
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 4. Сотрудника, чье имя начинается на «М» и заканчивается на «а».
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+select employee.name from employee
+where name like 'M%a'
+```
+
+4.  Маша пришла в спортивный зал и хочет позаниматься на тренажёре
+    с нагрузкой в 16 килограммов. Рядом лежит груда чугунных блинов.
+    Девушка видит, что пудовых грузов в наборе сейчас нет, значит, одним
+    блином не обойтись, а больше двух на тренажёр не установить.  
+     Маше нужно найти два блина (или один, если такой будет иметься в
+    наличии), которые в сумме дают 16 килограммов, и при этом не потратить на
+    поиск всё отведённое на тренировку время. Гарантируется, что это
+    выполнимая задача и такие два блина точно есть: об этом Маше рассказал её
+    друг, который занимался на этом же тренажёре с той же нагрузкой.  
+    Составьте на JS или TS алгоритм, по которому Маша сможет получить
+    необходимый для тренажёра вес. Так как девушка купила премиум
+    абонемент, подразумевается, что в зале могут встречаться блины
+    всевозможных размеров.
+
+Решение:
+
+```
+const weights = [4, 3, 20, 25, 1.25, 2.5, 8, 10, 12, 5, 13];
+const weightResulting = 16;
+const result = [];
+
+for (let index = 0; index < weights.length; index++) {
+  for (let j = 0; j < weights.length; j++) {
+    weights[index] + weights[j] === weightResulting
+      ? result.push(weights[index], weights[j])
+      : null;
+  }
+}
+
+console.log(result.slice(0, 2));
+```
+
+### Технологии:
+
+- [JavaScript](https://www.javascript.com/)
+- [React](https://reactjs.org/)
+- [Next JS](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [JSON Server](https://www.npmjs.com/package/json-server)
+- [Axios](https://axios-http.com/)

@@ -1,0 +1,4 @@
+{
+  "/statements/:statementId/sections/:sectionId": "/sections/:sectionId",
+  "/statements/:statementId/sections/:sectionId/messages/:messagesId": "/messages/:messagesId"
+}

@@ -1,0 +1,227 @@
+{
+  "statements": [
+    {
+      "id": 1,
+      "number": "450-22",
+      "unreadCount": 3
+    },
+    {
+      "id": 2,
+      "number": "512-22",
+      "unreadCount": 0
+    },
+    {
+      "id": 3,
+      "number": "351-22",
+      "unreadCount": 0
+    },
+    {
+      "id": 4,
+      "number": "300-22",
+      "unreadCount": 0
+    },
+    {
+      "id": 5,
+      "number": "520-22",
+      "unreadCount": 4
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "statementId": 1,
+      "name": "АР - Архитектурные решения",
+      "unreadCount": 1
+    },
+    {
+      "id": 2,
+      "statementId": 1,
+      "name": "СМ - Сметы",
+      "unreadCount": 2
+    },
+    {
+      "id": 13,
+      "statementId": 1,
+      "name": "КР - Конструктивные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 21,
+      "statementId": 2,
+      "name": "АР - Архитектурные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 22,
+      "statementId": 2,
+      "name": "СМ - Сметы",
+      "unreadCount": 0
+    },
+    {
+      "id": 23,
+      "statementId": 2,
+      "name": "КР - Конструктивные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 31,
+      "statementId": 3,
+      "name": "АР - Архитектурные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 32,
+      "statementId": 3,
+      "name": "СМ - Сметы",
+      "unreadCount": 0
+    },
+    {
+      "id": 33,
+      "statementId": 3,
+      "name": "КР - Конструктивные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 41,
+      "statementId": 4,
+      "name": "АР - Архитектурные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 42,
+      "statementId": 4,
+      "name": "СМ - Сметы",
+      "unreadCount": 0
+    },
+    {
+      "id": 43,
+      "statementId": 4,
+      "name": "КР - Конструктивные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 51,
+      "statementId": 5,
+      "name": "АР - Архитектурные решения",
+      "unreadCount": 0
+    },
+    {
+      "id": 5,
+      "statementId": 5,
+      "name": "СМ - Сметы",
+      "unreadCount": 4
+    },
+    {
+      "id": 53,
+      "statementId": 5,
+      "name": "КР - Конструктивные решения",
+      "unreadCount": 0
+    }
+  ],
+  "messages": [
+    {
+      "id": 111,
+      "text": "Здравствуйте, Lorem ipsum dolor sit amet",
+      "isUnread": false,
+      "isMy": true,
+      "sendDate": "23.12 15:50",
+      "sectionId": 1
+    },
+    {
+      "id": 222,
+      "text": "Здравствуйте, Lorem ipsum dolor sit amet",
+      "isUnread": false,
+      "isMy": false,
+      "sendDate": "23.12 16:12",
+      "sectionId": 1
+    },
+    {
+      "id": 223,
+      "text": "Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "isUnread": false,
+      "isMy": false,
+      "sendDate": "23.12 16:15",
+      "sectionId": 1
+    },
+    {
+      "id": 225,
+      "text": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:18",
+      "sectionId": 2
+    },
+    {
+      "id": 112,
+      "text": "Здравствуйте, Lorem ipsum dolor sit amet",
+      "isUnread": false,
+      "isMy": true,
+      "sendDate": "23.12 15:50",
+      "sectionId": 2
+    },
+    {
+      "id": 230,
+      "text": "Здравствуйте, Lorem ipsum dolor sit amet",
+      "isUnread": false,
+      "isMy": false,
+      "sendDate": "23.12 16:12",
+      "sectionId": 2
+    },
+    {
+      "id": 226,
+      "text": "Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:15",
+      "sectionId": 2
+    },
+    {
+      "id": 229,
+      "text": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:18",
+      "sectionId": 2
+    },
+    {
+      "id": 99,
+      "text": "Добрый день, Lorem ipsum dolor sit amet",
+      "isUnread": false,
+      "isMy": true,
+      "sendDate": "23.12 15:50",
+      "sectionId": 5
+    },
+    {
+      "id": 999,
+      "text": "Добрый день, Lorem ipsum dolor sit amet",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:12",
+      "sectionId": 5
+    },
+    {
+      "id": 9999,
+      "text": "Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:15",
+      "sectionId": 5
+    },
+    {
+      "id": 911,
+      "text": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:18",
+      "sectionId": 5
+    },
+    {
+      "id": 912,
+      "text": "Lorem ipsum dolor",
+      "isUnread": true,
+      "isMy": false,
+      "sendDate": "23.12 16:19",
+      "sectionId": 5
+    }
+  ]
+}
